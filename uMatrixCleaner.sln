@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2015
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "uMatrixCleaner", "uMatrixCleaner\uMatrixCleaner.csproj", "{45FEEDA3-D754-48F8-B5E8-8F9D87F2693C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "uMatrixCleaner", "uMatrixCleaner\uMatrixCleaner.csproj", "{45FEEDA3-D754-48F8-B5E8-8F9D87F2693C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{BCF2DBA2-3EE0-4A64-AEDC-DD44453D2520}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tests", "Tests\Tests.csproj", "{BCF2DBA2-3EE0-4A64-AEDC-DD44453D2520}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "uMatrixCleanerOnline", "uMatrixCleanerOnline\uMatrixCleanerOnline.csproj", "{D8C7F2C1-D6CF-49A6-B846-007D93A0871E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{BCF2DBA2-3EE0-4A64-AEDC-DD44453D2520}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BCF2DBA2-3EE0-4A64-AEDC-DD44453D2520}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BCF2DBA2-3EE0-4A64-AEDC-DD44453D2520}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8C7F2C1-D6CF-49A6-B846-007D93A0871E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8C7F2C1-D6CF-49A6-B846-007D93A0871E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8C7F2C1-D6CF-49A6-B846-007D93A0871E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8C7F2C1-D6CF-49A6-B846-007D93A0871E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
