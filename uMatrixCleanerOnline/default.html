@@ -1,38 +1,52 @@
 <!DOCTYPE html>
-<html>
+
+
 <head>
 
-<style type="text/css">
-        #button{
+    <style type="text/css">
+        #button {
             text-align: center;
-    　　}
-      #left,#right{float:left;padding:10px}
-</style>
-    
+        }
+
+        #left,
+        #right {
+            float: left;
+            width: 50%
+        }
+
+        #main {
+            margin: auto;
+        }
+    </style>
+
+
+</head>
+
 <p>Parameters:</p>
 <input type="text" />
 
 
-</head>
-<br/>
-<div id="main" >
-<div id="left">
-<label>input</label><br/>
+<br />
+<div id="main">
+    <div id="left">
+        <label>input</label><br />
 
-<textarea name="输入" style="width:200px;height:80px"/>
-</textarea>
-</div>
+        <textarea name="输入" rows="10" style="width:100%">
+  </textarea>
+    </div>
 
-<div id="right">
-<label>output</label><br/>
-<textarea name="输出" style="width:200px;height:80px"/>
-</textarea>
-</div>
-</div>
+    <div id="right">
+        <label>output</label><br />
 
+        <textarea name="输出" rows="10" style="width:100%">
+  </textarea>
+    </div>
+
+</div>
+<br />
 <div id="button">
-<button type="button">Clean<br/></button>
+    <button type="button">Clean<br /></button>
+
 </div>
 
 
-</html>
