@@ -35,6 +35,7 @@ namespace uMatrixCleanerOL
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseStaticFiles();
             app.UseMvc();
         }
     }
