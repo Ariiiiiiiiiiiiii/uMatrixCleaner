@@ -19,7 +19,7 @@
     "uMatrixCleanerOL": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "api/values",
+      "launchUrl": "default.html",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
