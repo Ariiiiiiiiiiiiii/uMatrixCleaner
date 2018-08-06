@@ -28,7 +28,7 @@ namespace uMatrixCleanerOL.Controllers
 
         // POST: api/Default
         [HttpPost]
-        public string Post([FromBody]string value)
+        public string Post(string value)
         {
             System.IO.File.WriteAllText("input.txt", value);
             return $"{value.Split('\r', '\n').Length} rules available.";
