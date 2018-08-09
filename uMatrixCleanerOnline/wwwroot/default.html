@@ -21,32 +21,41 @@
 
 
 </head>
-
-<p>Parameters:</p>
-<input type="text" />
-
-
-<br />
 <form id="main" method="post" action="/api/Cleaner">
+    <p>Parameter1:</p>
+    <input type="text" id="para1" name="para1"/>
+
+
+    <p>Parameter2:</p>
+    <input type="text" id="para2" name="para2"/>
+
+
+
+    <br />
+
     <div id="left">
         <label>input</label><br />
 
-        <textarea name="value" rows="10" style="width:100%;height:155px;" ></textarea>
+        <textarea id="ip" name="value" rows="10" style="width:100%;height:155px;"></textarea>
     </div>
 
     <div id="right">
         <label>output</label><br />
 
         <textarea name="输出" rows="10" style="width:100%;height:155px;">
+
   </textarea>
+
+
     </div>
     <div id="button">
         <input type="submit" value="Clean" />
+
+
     </div>
+
 </form>
 <br />
-
-    
 
 
 
