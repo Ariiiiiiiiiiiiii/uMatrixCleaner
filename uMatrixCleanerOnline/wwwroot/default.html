@@ -1,6 +1,4 @@
 <!DOCTYPE html>
-
-
 <head>
 
     <style type="text/css">
@@ -21,41 +19,94 @@
 
 
 </head>
-<form id="main" method="post" action="/api/Cleaner">
-    <p>Parameter1:</p>
-    <input type="text" id="para1" name="para1"/>
+<body>
+
+    <form id="main" method="post" action="/default.html">
+        <p>Parameter1:</p>
+        <input type="text" id="para1" name="para1" />
 
 
-    <p>Parameter2:</p>
-    <input type="text" id="para2" name="para2"/>
+        <p>Parameter2:</p>
+        <input type="text" id="para2" name="para2" />
 
 
 
-    <br />
+        <br />
 
-    <div id="left">
-        <label>input</label><br />
+        <div id="left">
+            <label>input</label><br />
 
-        <textarea id="ip" name="value" rows="10" style="width:100%;height:155px;"></textarea>
-    </div>
+            <textarea id="ip" name="value" rows="10" style="width:100%;height:155px;"></textarea>
+        </div>
 
-    <div id="right">
-        <label>output</label><br />
+        <div id="right">
+            <label>output</label><br />
 
-        <textarea name="输出" rows="10" style="width:100%;height:155px;">
+            <textarea id="rightTextArea" name="输出" rows="10" style="width:100%;height:155px;">
 
   </textarea>
 
 
-    </div>
+        </div>
+
+
+        <div id="button" class="test">
+            <input type="submit" value="Clean123" />
+
+
+        </div>
+
+
+
+    </form>
     <div id="button">
-        <input type="submit" value="Clean" />
+        <input type="submit" value="Reset" onclick=" cl()" />
 
 
     </div>
 
-</form>
-<br />
+    <br />
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+<script>
+    function cl() {
+        document.getElementById('rightTextArea').value = "";
+    }
+</script>
+<script>
+    $('.test').click(function (event) {
+        var para1 = parseInt($('#para1').val());
+        var para2 = parseInt($('#para2').val());
+        var value = $('textarea#ip').val();
+        value = value.toString();
+        $.ajax({
+            type: 'POST',
+            data: { value, para1, para2 },
+            dataType: 'json',
+            async: false, 
+            success: function (data) {
+                
+                $('#rightTextArea').val(data);
+            },
+            error: function (data) {
+                $('#rightTextArea').val('hi there');
+                console.log(data);
+                $('#rightTextArea').val(Object.values(data));
+                
+              
+            }
+        });
+
+        event.preventDefault();
+    });
+    
+
+
+
+   
+</script>
 
 
 
