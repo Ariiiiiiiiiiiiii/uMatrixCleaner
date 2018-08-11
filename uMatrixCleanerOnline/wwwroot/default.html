@@ -2,7 +2,7 @@
 <head>
 
     <style type="text/css">
-        #button {
+        .button {
             text-align: center;
         }
 
@@ -17,7 +17,9 @@
         }
     </style>
 
-
+    <title>
+        uMatrixCleaner Project
+    </title>
 </head>
 <body>
 
@@ -50,7 +52,7 @@
         </div>
 
 
-        <div id="button" class="test">
+        <div class="button test">
             <input type="submit" value="Clean123" />
 
 
@@ -59,54 +61,55 @@
 
 
     </form>
-    <div id="button">
+    <div class="button">
         <input type="submit" value="Reset" onclick=" cl()" />
 
 
     </div>
 
     <br />
-</body>
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"
-        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous"></script>
-<script>
-    function cl() {
-        document.getElementById('rightTextArea').value = "";
-    }
-</script>
-<script>
-    $('.test').click(function (event) {
-        var para1 = parseInt($('#para1').val());
-        var para2 = parseInt($('#para2').val());
-        var value = $('textarea#ip').val();
-        value = value.toString();
-        $.ajax({
-            type: 'POST',
-            data: { value, para1, para2 },
-            dataType: 'json',
-            async: false, 
-            success: function (data) {
-                
-                $('#rightTextArea').val(data);
-            },
-            error: function (data) {
-                $('#rightTextArea').val('hi there');
-                console.log(data);
-                $('#rightTextArea').val(Object.values(data));
-                
-              
-            }
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+    <script>
+        function cl() {
+            document.getElementById('rightTextArea').value = "";
+        }
+    </script>
+    <script>
+        $('.test').click(function (event) {
+            var para1 = parseInt($('#para1').val());
+            var para2 = parseInt($('#para2').val());
+            var value = $('textarea#ip').val();
+            value = value.toString();
+            $.ajax({
+                type: 'POST',
+                data: { value, para1, para2 },
+                dataType: 'json',
+                async: false,
+                success: function (data) {
+
+                    $('#rightTextArea').val(data);
+                },
+                error: function (data) {
+                    $('#rightTextArea').val('hi there');
+                    console.log(data);
+                    $('#rightTextArea').val(Object.values(data));
+
+
+                }
+            });
+
+            event.preventDefault();
         });
 
-        event.preventDefault();
-    });
-    
 
 
 
-   
-</script>
+
+    </script>
+</body>
+
 
 
 
