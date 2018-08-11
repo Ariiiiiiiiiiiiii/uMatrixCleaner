@@ -46,7 +46,7 @@ namespace uMatrixCleanerOL.Controllers
             String a = UsingExe(value,merge,delete);
             //Console.Write(a);
             //return $"{a.Split('\n').Length} rules available."
-            string strs1 = System.IO.File.ReadAllText(@"uMatrixRules-2018-08-10.txt");
+            string strs1 = System.IO.File.ReadAllText(@"output.txt");
             //return strs1;
             //return $"{strs1.Split('\n','\r')}";
             string[] sArray1 = strs1.Split('\n');
@@ -82,7 +82,7 @@ namespace uMatrixCleanerOL.Controllers
             
             process.StartInfo.FileName = "dotnet";//应用程序名字
             process.StartInfo.WorkingDirectory = @"D:\uMatrixCleaner\uMatrixCleaner\bin\Debug\netcoreapp2.0";//应用程序所在路径
-            string s = "D:\\uMatrixCleaner\\uMatrixCleanerOnline\\input.txt " + "--MergeThreshold " + para1 + ' ' + "--RandomDelete " + para2;
+            string s ="--MergeThreshold " + para1 + ' ' + "--RandomDelete " + para2+ " D:\\uMatrixCleaner\\uMatrixCleanerOnline\\input.txt " + "D:\\uMatrixCleaner\\uMatrixCleanerOnline\\output.txt";
             // string s= @"uMatrixCleaner.dll D:\uMatrixCleaner\uMatrixCleanerOnline\input.txt " + "--MergeThreshold " + para1 + ' ' + "--RandomDelete " + para2;
             process.StartInfo.Arguments = "uMatrixCleaner.dll " + s;//传入的参数，用空格分隔，如果参数本身带有空格就用""括起来
             //process.StartInfo.Arguments = "dotnet.exe uMatrixCleaner.dll";
